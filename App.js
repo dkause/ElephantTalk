@@ -52,14 +52,15 @@ const Stack = createNativeStackNavigator()
 const App = () => {
   // check the connection status, alert if lost, disable firebase and pass it as prop
   const connectionStatus = useNetInfo()
+
   useEffect(() => {
     if (connectionStatus.isConnected === false) {
       Alert.alert('Connection lost')
-      disableNetwork(db)
-    } else if (connectionStatus === true) {
-      enableNetwork(db)
+      void disableNetwork(db)
+    } else if (connectionStatus.isConnected === true) {
+      void enableNetwork(db)
     }
-  })
+  }, [connectionStatus.isConnected, db])
 
   return (
     <NavigationContainer>

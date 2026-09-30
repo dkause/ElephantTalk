@@ -4,7 +4,7 @@
 
 ## Description
 
-ElephantTalk is a Chat App for mobiles made in REACT Native.
+ElephantTalk is a Chat App for mobiles made in React Native.
 
 Users can send messages, take photos, upload pictures from the library of the phone and send their location. 
 
@@ -30,8 +30,7 @@ You will need
 
 - Firebase
 
-To build your own app.  
-Clone the repo and go!
+To build your own app - Clone the repo and go!
 
 ## Features
 
